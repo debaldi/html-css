@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes Externas</title>
+</head>
+<body>
+
+    <style>
+        /*
+        Tipos de format()
+        - opentype (otf)
+        - truetype (ttf)
+        - embedded-opentype
+        - truetype-aat (Apple Advanced Typography)
+        - svr
+        */
+        @font-face {
+            font-family: 'Ocean';
+            src: url('fontes/Ocean Road.ttf') format('opentype'),
+            url('fontes/Ocean Road.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+            /* 
+            O nome da font-family precisa ser o mesmo que foi colocado em @font-face
+            */
+            font-family:'Ocean', Times, serif;
+            font-size: 3em;
+            font-weight: normal;            
+        }
+        h2{
+            font-family: 'Ocean', Arial, serif;
+            font-size: 2em;
+            font-weight: normal;
+        }
+        
+    </style>
+    <h1>Títlo</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo facilis quos eveniet dignissimos, blanditiis necessitatibus eius! Sunt cumque enim earum qui officiis eius aperiam itaque, modi velit, sequi laboriosam repellendus.</p>
+
+    <h2>Subtítulo</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo nesciunt cupiditate iste dolorum rerum quisquam, recusandae est ab, quia praesentium voluptatum saepe qui aliquam blanditiis fugiat quae suscipit quos incidunt.</p>
+    
+</body>
+</html>

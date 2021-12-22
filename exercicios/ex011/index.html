@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens que se adaptam</title>
+</head>
+<body>
+    <h1>imagens Dinâmicas</h1>
+    <p>Tente abrir este site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador</p>
+    <picture>
+        <source media="(max-width:750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width:1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="Imagem flexível">
+    </picture>
+    
+    <h1>Reproduzindo Áudio</h1>
+    
+    <p>Vamos aprender a reproduzir áudio em HTML5</p>
+    <p>Formato 01</p>
+
+    <!-- Formato para reproduriz áudio muito limitado -->
+    <audio src="midia/happy-mistake.mp3" controls></audio> 
+
+    <p>Formato 02</p>
+    <!-- Formato corrreto para reproduzir áudio -->
+    <audio preload="metadata" controls loop>
+        <source src="midia/happy-mistake.mp3" type="audio/mpeg">
+        <source src="midia/happy-mistake.ogg" type="audio/ogg">
+        <p>Infelizmente seu navegador não reproduz áudio
+            <a href="midia/happy-mistake.mp3">Clique aqui para baixar o áudio</a>
+        </p>
+    </audio>
+    <!-- 
+        preload é uma opção de carregamento das informações do áudio
+        auto = caregamento total das informações e do áudio
+        metadata = somente as informações necessárias
+        none = não carrega nada
+        Arquivos wav são muito pesados para internet 
+    -->
+</body>
+</html>
