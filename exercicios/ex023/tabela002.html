@@ -12,16 +12,33 @@
         table{
             width: 400px;
             border-collapse: collapse;
-        }
-        
+            position: relative;
+        }        
         td, th{
             border: 1px solid black;
             padding: 10px;
+        }        
+        caption{
+            font-size: 1em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
         }
         thead, tfoot{
             background-color: gray;
             color: white;
         }
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: rgba(128, 128, 128, 0.753);
+        }
+        tbody > tr:nth-child(odd){ /* 2n-1 */
+            background-color: lightgray;
+        }
+        tbody > tr:nth-child(even){ /* 2n */
+            background-color: lightblue;
+        }        
         td.num{
             text-align: right;
         }
@@ -40,20 +57,26 @@
                 tr, td, th
             TFOOT
                 tr, td, th
+    
+        caption -> Legenda da Tabela
+        scope   -> Titulo da coluna ou da Linha
+        row     -> Linha
+        col     -> Coluna
+    
     -->
 
     <table>
-        
+        <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px;">População</th>
             </tr>
         </thead>
 
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th>
                 <td class="num"><strong>210.147.125</strong></td>
             </tr>
         </tfoot>
@@ -168,7 +191,13 @@
                 <td class="num">605.761</td>
             </tr>
         </tbody>  
-            
+
     </table>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam dolor doloribus et minima quasi. Iste culpa delectus perspiciatis et doloribus sed veniam magni consectetur? Corporis ratione officiis nam quas repudiandae! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, impedit quia aut ratione ipsam eos corrupti blanditiis nisi illo temporibus aspernatur quis adipisci fugiat. Animi voluptates saepe porro. Laudantium, ab. Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt sequi iure magni similique, ipsam aspernatur reprehenderit in, veniam neque quidem odio cupiditate. Fugit omnis id alias quisquam doloremque soluta laboriosam? Lorem ipsum dolor sit, amet consectetur adipisicing elit. In vitae illo alias iure iusto ut repellendus fuga omnis vel, blanditiis perferendis facere tempore voluptates debitis, laudantium eum sapiente, earum velit. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum recusandae vitae fugiat voluptate error sit temporibus ipsam ut est, dolores maxime porro assumenda accusamus at fugit iure suscipit cupiditate! Fuga? Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur dolore tempore temporibus vel aut ab laboriosam similique. Eius soluta dignissimos modi eaque, dolorem quam omnis. Debitis, ducimus provident. Animi, alias?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam dolor doloribus et minima quasi. Iste culpa delectus perspiciatis et doloribus sed veniam magni consectetur? Corporis ratione officiis nam quas repudiandae! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, impedit quia aut ratione ipsam eos corrupti blanditiis nisi illo temporibus aspernatur quis adipisci fugiat. Animi voluptates saepe porro. Laudantium, ab. Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt sequi iure magni similique, ipsam aspernatur reprehenderit in, veniam neque quidem odio cupiditate. Fugit omnis id alias quisquam doloremque soluta laboriosam? Lorem ipsum dolor sit, amet consectetur adipisicing elit. In vitae illo alias iure iusto ut repellendus fuga omnis vel, blanditiis perferendis facere tempore voluptates debitis, laudantium eum sapiente, earum velit. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum recusandae vitae fugiat voluptate error sit temporibus ipsam ut est, dolores maxime porro assumenda accusamus at fugit iure suscipit cupiditate! Fuga? Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur dolore tempore temporibus vel aut ab laboriosam similique. Eius soluta dignissimos modi eaque, dolorem quam omnis. Debitis, ducimus provident. Animi, alias?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam dolor doloribus et minima quasi. Iste culpa delectus perspiciatis et doloribus sed veniam magni consectetur? Corporis ratione officiis nam quas repudiandae! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, impedit quia aut ratione ipsam eos corrupti blanditiis nisi illo temporibus aspernatur quis adipisci fugiat. Animi voluptates saepe porro. Laudantium, ab. Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt sequi iure magni similique, ipsam aspernatur reprehenderit in, veniam neque quidem odio cupiditate. Fugit omnis id alias quisquam doloremque soluta laboriosam? Lorem ipsum dolor sit, amet consectetur adipisicing elit. In vitae illo alias iure iusto ut repellendus fuga omnis vel, blanditiis perferendis facere tempore voluptates debitis, laudantium eum sapiente, earum velit. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum recusandae vitae fugiat voluptate error sit temporibus ipsam ut est, dolores maxime porro assumenda accusamus at fugit iure suscipit cupiditate! Fuga? Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur dolore tempore temporibus vel aut ab laboriosam similique. Eius soluta dignissimos modi eaque, dolorem quam omnis. Debitis, ducimus provident. Animi, alias?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam dolor doloribus et minima quasi. Iste culpa delectus perspiciatis et doloribus sed veniam magni consectetur? Corporis ratione officiis nam quas repudiandae! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, impedit quia aut ratione ipsam eos corrupti blanditiis nisi illo temporibus aspernatur quis adipisci fugiat. Animi voluptates saepe porro. Laudantium, ab. Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt sequi iure magni similique, ipsam aspernatur reprehenderit in, veniam neque quidem odio cupiditate. Fugit omnis id alias quisquam doloremque soluta laboriosam? Lorem ipsum dolor sit, amet consectetur adipisicing elit. In vitae illo alias iure iusto ut repellendus fuga omnis vel, blanditiis perferendis facere tempore voluptates debitis, laudantium eum sapiente, earum velit. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum recusandae vitae fugiat voluptate error sit temporibus ipsam ut est, dolores maxime porro assumenda accusamus at fugit iure suscipit cupiditate! Fuga? Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur dolore tempore temporibus vel aut ab laboriosam similique. Eius soluta dignissimos modi eaque, dolorem quam omnis. Debitis, ducimus provident. Animi, alias?</p>
+    
 </body>
 </html>
