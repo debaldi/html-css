@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura de Tabalas</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+
+        table{
+            width: 400px;
+            border-collapse: collapse;
+        }
+
+        tr.linha{
+            background-color: rgba(128, 128, 128, 0.466);
+        }
+
+        td{            
+            padding: 5px;
+            border: 1px solid black;
+        }
+
+        td.dado{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Estrutura de Tabelas</h1>
+    
+    <!--
+        HIERARQUIA DE TABLEAS (Simples)
+        TABLE -> Tabela
+            TABLE ROW = Linha da Tabela
+                TABLE HEADER = Cabeçalho da Tabela
+                TABLE DATA = Dados da Tabela
+    -->
+
+    <table> <!-- Tela -->        
+        <tr> <!-- Primeira Linha -->
+            <td>A1</td>
+            <td>B1</td>
+            <td>C1</td>
+        </tr>
+        
+        <tr class="linha"> <!-- Segunda Linha -->
+            <td>A2</td>
+            <td>B2</td>
+            <td>C2</td>
+        </tr>
+
+        <tr> <!-- Terceira Linha -->
+            <td>A3</td>
+            <td>B3</td>
+            <td>C3</td>
+        </tr>
+
+        <tr> <!-- Quarta Linha -->
+            <td>A4</td>
+            <td class="dado">B4</td>
+        </tr>
+
+        <tr> <!-- Quinta Linha -->
+            <td>A5</td>
+        </tr>
+    </table>
+</body>
+</html>
