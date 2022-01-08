@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios de Tabelas</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table{
+            width: 400px;
+            border-collapse: collapse;
+        }
+        caption{
+            font-size: 1.3em;
+            font-weight: bold;
+            padding: 5px;
+        }
+        th, td{
+            width: 100%;
+            border: 1px solid black;
+            padding: 5px;
+        }
+        .amarelo{
+            background-color: yellow;
+        }
+        .vermelho{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h2>Exercicío de Tabela</h2>
+    
+    <table>
+        <!--
+            colgroup HTML5 para destacar colunas
+            col     -> cada coluna
+            span    -> número de colulas em sequencia
+        -->
+
+        <colgroup>
+            <col class="amarelo">
+            <col class="vermelho" span="2">
+            <col class="amarelo">
+        </colgroup>
+        
+        <caption>Cadastro</caption>
+        
+        <tr>
+            <th scope="colgroup">Nome</th>
+            <th scope="colgroup">sexo</th>
+            <th scope="colgroup">Idade</th>
+            <th scope="colgroup">Profissão</th>
+        </tr>
+        
+        <tr>
+            <td>Ana Maria</td>
+            <td>F</td>
+            <td>25</td>
+            <td>Jornalista</td>
+        </tr>
+        <tr>
+            <td>Cláudio</td>
+            <td>M</td>
+            <td>28</td>
+            <td>Professor</td>
+        </tr>
+        <tr>
+            <td>Emerson de Baldi</td>
+            <td>M</td>
+            <td>34</td>
+            <td>Programador</td>
+        </tr>
+        <tr>
+            <td>Mária</td>
+            <td>F</td>
+            <td>19</td>
+            <td>Médica</td>
+        </tr>
+
+    </table>
+</body>
+</html>
